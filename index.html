@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Boutique Luxe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=ATg2O82iviOsuv311kcCtBifnDrs5lsfwLQzTtBfXsV08XTxhPPuM4oVeF2XHXwIO7lFZaAKYFJQakZ5&currency=EUR&components=buttons"></script>
+</head>
+<body>
+
+<header>
+    <h1>BOUTIQUE LUXE</h1>
+    <nav>
+        <a href="slider" class="link-slide">Accueil</a>
+        <a href="catalogue" class="link-slide">Produits</a>
+        <a href="about" class="link-slide">À propos</a>
+        <a href="contact" class="link-slide">Contact</a>
+    </nav>
+    <button id="btn-panier">🛒 Panier</button>
+    <button id="toggleTheme">🌙 / ☀️</button>
+</header>
+
+<!-- SLIDER -->
+<div id="slider">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1503341455253-88b6dfd89d48');">
+        <h2>Bienvenue dans la Boutique Luxe</h2>
+        <p>Découvrez nos produits premium</p>
+    </div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1491553895911-0055eca6402d');">
+        <h2>Qualité & Élégance</h2>
+        <p>Des articles sélectionnés avec soin</p>
+    </div>
+</div>
+
+<!-- CATALOGUE -->
+<section id="catalogue">
+    <h2 class="cat-titre fade-scroll">Mode</h2>
+    <div class="catalogue">
+        <div class="produit fade-scroll">
+            <img src="https://images.unsplash.com/photo-1600183893325-88b6dfd89d48" />
+            <h3>Sac à main de luxe</h3>
+            <p>149.99 €</p>
+            <button onclick="acheter('Sac à main de luxe',149.99,'https://images.unsplash.com/photo-1600183893325-88b6dfd89d48')">Acheter</button>
+        </div>
+        <div class="produit fade-scroll">
+            <img src="https://images.unsplash.com/photo-1528701800489-20be3c2ea8e2" />
+            <h3>Montre plaquée or</h3>
+            <p>299.99 €</p>
+            <button onclick="acheter('Montre plaquée or',299.99,'https://images.unsplash.com/photo-1528701800489-20be3c2ea8e2')">Acheter</button>
+        </div>
+        <div class="produit fade-scroll">
+            <img src="https://images.unsplash.com/photo-1556909192-73bb6b8ce7e7" />
+            <h3>Lunettes de soleil VIP</h3>
+            <p>89.99 €</p>
+            <button onclick="acheter('Lunettes de soleil VIP',89.99,'https://images.unsplash.com/photo-1556909192-73bb6b8ce7e7')">Acheter</button>
+        </div>
+    </div>
+
+    <h2 class="cat-titre fade-scroll">Tech</h2>
+    <div class="catalogue">
+        <div class="produit fade-scroll">
+            <img src="https://images.unsplash.com/photo-1587825140708-8c5d0f3b7c7e" />
+            <h3>Écouteurs sans fil</h3>
+            <p>129.99 €</p>
+            <button onclick="acheter('Écouteurs sans fil',129.99,'https://images.unsplash.com/photo-1587825140708-8c5d0f3b7c7e')">Acheter</button>
+        </div>
+        <div class="produit fade-scroll">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" />
+            <h3>Smartwatch premium</h3>
+            <p>249.99 €</p>
+            <button onclick="acheter('Smartwatch premium',249.99,'https://images.unsplash.com/photo-1517336714731-489689fd1ca8')">Acheter</button>
+        </div>
+    </div>
+
+    <h2 class="cat-titre fade-scroll">Maison</h2>
+    <div class="catalogue">
+        <div class="produit fade-scroll">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+            <h3>Lampe design</h3>
+            <p>59.99 €</p>
+            <button onclick="acheter('Lampe design',59.99,'https://images.unsplash.com/photo-1600585154340-be6161a56a0c')">Acheter</button>
+        </div>
+        <div class="produit fade-scroll">
+            <img src="https://images.unsplash.com/photo-1586023492120-2f5f84a18f80" />
+            <h3>Tapis luxueux</h3>
+            <p>199.99 €</p>
+            <button onclick="acheter('Tapis luxueux',199.99,'https://images.unsplash.com/photo-1586023492120-2f5f84a18f80')">Acheter</button>
+        </div>
+    </div>
+
+    <h2 class="cat-titre fade-scroll">Accessoires</h2>
+    <div class="catalogue">
+        <div class="produit fade-scroll">
+            <img src="https://images.unsplash.com/photo-1518544882358-7d9b93ee20ec" />
+            <h3>Ceinture cuir premium</h3>
+            <p>79.99 €</p>
+            <button onclick="acheter('Ceinture cuir premium',79.99,'https://images.unsplash.com/photo-1518544882358-7d9b93ee20ec')">Acheter</button>
+        </div>
+        <div class="produit fade-scroll">
+            <img src="https://images.unsplash.com/photo-1580910051070-1aeb8d09c02c" />
+            <h3>Chapeau stylé</h3>
+            <p>49.99 €</p>
+            <button onclick="acheter('Chapeau stylé',49.99,'https://images.unsplash.com/photo-1580910051070-1aeb8d09c02c')">Acheter</button>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="page fade-scroll">
+    <h2>À propos</h2>
+    <p>Bienvenue dans Boutique Luxe, un espace dédié à l’élégance, à la qualité et au raffinement. Chaque produit est sélectionné pour offrir une expérience unique.</p>
+</section>
+
+<section id="contact" class="page fade-scroll">
+    <h2>Contact</h2>
+    <form id="form-contact">
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre email" required>
+        <textarea placeholder="Votre message" required></textarea>
+        <button>Envoyer</button>
+    </form>
+</section>
+
+<section id="compte" class="page fade-scroll hidden">
+    <h2>Compte Utilisateur</h2>
+    <div id="form-creation">
+        <h3>Créer un nouveau compte</h3>
+        <input type="text" id="newNom" placeholder="Nom complet" required>
+        <input type="email" id="newEmail" placeholder="Email" required>
+        <input type="password" id="newPass" placeholder="Mot de passe" required>
+        <button onclick="creerCompte(event)">Créer le compte (10% de réduction)</button>
+    </div>
+    <div id="form-login" style="margin-top:20px;">
+        <h3>Connexion</h3>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPass" placeholder="Mot de passe" required>
+        <button onclick="connexion(event)">Se connecter</button>
+    </div>
+</section>
+
+<section id="coordonnees" class="page fade-scroll hidden">
+    <h2>Vos coordonnées</h2>
+    <form id="form-coord">
+        <input type="text" placeholder="Prénom" required>
+        <input type="text" placeholder="Nom" required>
+        <input type="text" placeholder="Adresse" required>
+        <input type="text" placeholder="Ville" required>
+        <input type="text" placeholder="Code postal" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Téléphone" required>
+        <button onclick="confirmerCommande(event)">Confirmer</button>
+    </form>
+</section>
+
+<div id="panier">
+    <h2>PANIER</h2>
+    <div id="liste"></div>
+    <h3>Total : <span id="total">0</span> €</h3>
+    <button id="confirmer-panier">Acheter</button>
+    <button id="facture">Télécharger Facture PDF</button>
+    <div id="paypal"></div>
+    <button id="fermer">Fermer</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
